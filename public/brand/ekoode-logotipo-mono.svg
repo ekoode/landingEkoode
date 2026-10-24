@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -2 642 104" width="642" height="104" role="img" aria-label="EKOODE">
+  <title>EKOODE — logotipo monocromo (currentColor)</title>
+
+  <g fill="currentColor" fill-rule="evenodd">
+    <path d="M0 0H76V28H28V38H68V62H28V72H76V100H0Z"/>
+    <path d="M206 50a54 51 0 1 0 108 0a54 51 0 1 0-108 0ZM234 50a26 23 0 1 0 52 0a26 23 0 1 0-52 0Z"/>
+    <path d="M326 50a54 51 0 1 0 108 0a54 51 0 1 0-108 0ZM354 50a26 23 0 1 0 52 0a26 23 0 1 0-52 0Z"/>
+    <path d="M448 0H500A48 50 0 0 1 500 100H448ZM476 28V72H500A20 22 0 0 0 500 28Z"/>
+    <path d="M566 0H642V28H594V38H634V62H594V72H642V100H566Z"/>
+  </g>
+  <g transform="translate(94 0)" fill="currentColor">
+    <polygon points="0,0 28,0 28,100 0,100"/>
+    <polygon points="28,50 78,0 98,0 98,20 28,90" opacity="0.72"/>
+    <polygon points="28,50 78,100 98,100 98,80 28,10"/>
+    <polygon points="28,50 48,30 68,50 48,70" opacity="0.45"/>
+  </g>
+</svg>

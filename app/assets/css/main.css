@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@theme {
+  --color-noche: #0b132b;
+  --color-tinta: #0d1117;
+  --color-cobalto: #2b5bff;
+  --color-nucleo: #1537c9;
+  --color-cian: #46d9f2;
+  --color-hielo: #a8ecf8;
+  --color-niebla: #8da2c0;
+  --color-humo: #f4f8fd;
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    background: var(--color-noche);
+    color: var(--color-humo);
+    scrollbar-gutter: stable;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: var(--color-cian);
+    color: var(--color-noche);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-cian);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  code,
+  .font-mono {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+  }
+}
+
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 75rem;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 2.5rem);
+  }
+
+  .section {
+    padding-block: clamp(6rem, 4rem + 8vw, 10rem);
+  }
+
+  /* Titulares: ExtraBold 800, tracking -0.02em */
+  .display {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.04;
+    text-wrap: balance;
+  }
+
+  .h-section {
+    font-size: clamp(2.25rem, 1.3rem + 4vw, 4.75rem);
+  }
+
+  .lede {
+    max-width: 62ch;
+    color: var(--color-niebla);
+    font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+    text-wrap: pretty;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 3rem;
+    padding-inline: 1.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.975rem;
+    line-height: 1;
+    transition:
+      background-color 0.25s,
+      box-shadow 0.25s,
+      transform 0.25s var(--ease-expo);
+  }
+
+  .btn:active {
+    transform: scale(0.97);
+  }
+
+  /* Sobre fondo oscuro el acento es el cian */
+  .btn-primary {
+    background: var(--color-cian);
+    color: var(--color-noche);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-hielo);
+  }
+
+  .btn-ghost {
+    color: var(--color-humo);
+    box-shadow: inset 0 0 0 1px rgb(244 248 253 / 0.3);
+  }
+
+  .btn-ghost:hover {
+    box-shadow: inset 0 0 0 1px var(--color-humo);
+  }
+
+  .btn-sm {
+    min-height: 2.5rem;
+    padding-inline: 1.15rem;
+    font-size: 0.9rem;
+  }
+
+  .link {
+    color: var(--color-humo);
+    text-decoration: underline;
+    text-decoration-color: rgb(70 217 242 / 0.5);
+    text-underline-offset: 0.3em;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-color 0.25s;
+  }
+
+  .link:hover {
+    text-decoration-color: var(--color-cian);
+  }
+
+  /* Dato pendiente, visible a propósito */
+  .todo {
+    display: inline-block;
+    padding: 0.2rem 0.55rem;
+    border: 1px dashed rgb(168 236 248 / 0.6);
+    border-radius: 4px;
+    color: var(--color-hielo);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+}
+
+/* ---------- Intro del hero ----------
+   La clase .intro la pone un script en <head> antes del primer pintado,
+   solo si hay JS y no hay prefers-reduced-motion. Sin ella todo es visible. */
+.intro-logo {
+  display: none;
+}
+
+.intro .intro-logo {
+  display: block;
+  position: fixed;
+  left: 50%;
+  top: 46%;
+  z-index: 60;
+  width: min(82vw, 56rem);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.intro .intro-logo [data-k],
+.intro [data-hero-reveal] {
+  visibility: hidden;
+}
+
+.intro .header-logo,
+.intro .header-fade {
+  opacity: 0;
+}
+
+.intro body {
+  overflow: hidden;
+}
+
+/* Cursor personalizado: solo escritorio */
+.has-cursor,
+.has-cursor * {
+  cursor: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

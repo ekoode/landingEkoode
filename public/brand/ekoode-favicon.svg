@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="EKOODE">
+  <title>EKOODE — favicon</title>
+  <defs>
+    <linearGradient id="kStem" x1="0" y1="0" x2="28" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3C6DFF"/><stop offset="1" stop-color="#1537C9"/>
+    </linearGradient>
+    <linearGradient id="kArm" x1="28" y1="50" x2="98" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2B5BFF"/><stop offset="1" stop-color="#5FE0F5"/>
+    </linearGradient>
+    <linearGradient id="kLeg" x1="28" y1="50" x2="98" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3C6DFF"/><stop offset="1" stop-color="#1537C9"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="20" fill="#0B132B"/>
+  <g transform="translate(25.6 26) scale(0.76)">
+    <polygon points="0,0 28,0 28,100 0,100" fill="url(#kStem)"/>
+    <polygon points="28,50 78,0 98,0 98,20 28,90" fill="url(#kArm)"/>
+    <polygon points="28,50 78,100 98,100 98,80 28,10" fill="url(#kLeg)"/>
+    <polygon points="28,50 48,30 68,50 48,70" fill="#0B132B" opacity="0.42"/>
+  </g>
+</svg>

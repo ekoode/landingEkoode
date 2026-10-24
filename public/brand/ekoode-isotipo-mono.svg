@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="EKOODE">
+  <title>EKOODE — isotipo monocromo</title>
+
+  <g transform="translate(15 14)" fill="currentColor">
+    <polygon points="0,0 28,0 28,100 0,100"/>
+    <polygon points="28,50 78,0 98,0 98,20 28,90" opacity="0.72"/>
+    <polygon points="28,50 78,100 98,100 98,80 28,10"/>
+    <polygon points="28,50 48,30 68,50 48,70" opacity="0.45"/>
+  </g>
+</svg>
